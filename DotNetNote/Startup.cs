@@ -19,7 +19,7 @@ namespace DotNetNote
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            Configuration = configuration;//
         }
 
         public IConfiguration Configuration { get; }
@@ -59,7 +59,7 @@ namespace DotNetNote
             app.UseAuthentication();
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
+            app.UseEndpoints(endpoints => //Actually working from here
             {
                 endpoints.MapControllerRoute(
                     name: "default",
